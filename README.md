@@ -82,23 +82,11 @@ Use the retrieved TM to engineer the output spatial mode:
 
 ```
 .
-├── data/
-│   ├── raw/                  # Raw camera frames for each DMD pattern
-│   └── patterns/             # Binary DMD patterns used (train + test)
-├── src/
-│   ├── acquisition.py        # DMD control and camera capture
-│   ├── tm_retrieval.py       # GS algorithm for amplitude-only TM retrieval
-│   ├── validation.py         # Pearson correlation evaluation
-│   └── psf_engineering.py    # Bonus: target mode generation and binarization
-├── notebooks/
-│   ├── 01_data_acquisition.ipynb
-│   ├── 02_tm_retrieval.ipynb
-│   ├── 03_parametric_study.ipynb
-│   └── 04_psf_engineering.ipynb
+├── dmd_camera_control.ipynb    # controlling camera and DMD, generating dataset 
+├── train.py                    # training on dataset using Gerchberg-Saxton algorithm and to retrieve the matrix
+├── test.py                     # testing the transmission matrix and getting correlation
 ├── results/
-│   ├── figures/              # Plots: correlation vs. oversampling, retrieved TM, etc.
-│   └── tm_retrieved.npy      # Saved TM arrays
-├── requirements.txt
+│   └── tm_retrieved.npy      # Saved TM arrays and additional diagrams
 └── README.md
 ```
 
