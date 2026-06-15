@@ -103,12 +103,6 @@ opencv-python
 
 DMD and camera SDK libraries will depend on your specific hardware (e.g., ALP for Vialux DMDs, `instrumental-lib`, or vendor-provided Python APIs).
 
-Install Python dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## Key Parameters
@@ -130,12 +124,9 @@ After running the parametric study, expected outputs include:
 
 - Retrieved TM magnitude and phase maps for each oversampling ratio
 - Pearson correlation coefficient vs. `M/N` curve
-- (Bonus) Measured vs. target output intensity for PSF-engineered pattern
 
 ---
 
 ## References
 
-- Popoff, S. M. et al. *Measuring the Transmission Matrix in Optics.* PRL 104, 100601 (2010)
-- Conkey, D. B. et al. *Genetic algorithm optimization for focusing through turbid media.* Optics Express (2012)
 - Gerchberg, R. W. & Saxton, W. O. *A practical algorithm for the determination of phase from image and diffraction plane pictures.* Optik (1972)
