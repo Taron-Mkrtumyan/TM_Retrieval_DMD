@@ -9,11 +9,11 @@ from scipy.stats import pearsonr
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 # Same parameters as training
-DMD_GRID = (32,32)
+DMD_GRID = (4,4)
 
-CAM_GRID = (32,32)
-CAM_REGION_W = 4
-CAM_REGION_H = 4
+CAM_GRID = (4,4)
+CAM_REGION_W = 2
+CAM_REGION_H = 2
 
 CAM_ORIGIN_X = 1220
 CAM_ORIGIN_Y = 1017
@@ -190,25 +190,17 @@ def main():
         Y
     )
 
-    plt.figure(figsize=(10,4))
+    sample = 0
+
+    plt.figure(figsize=(8,4))
 
     plt.subplot(121)
-    plt.imshow(
-        Y[:20],
-        aspect="auto",
-        cmap="viridis"
-    )
+    plt.imshow(Y[sample].reshape(4,4), cmap="viridis")
     plt.title("Ground Truth")
 
     plt.subplot(122)
-    plt.imshow(
-        pred[:20],
-        aspect="auto",
-        cmap="viridis"
-    )
+    plt.imshow(pred[sample].reshape(4, 4), cmap="viridis")
     plt.title("Prediction")
-
-    plt.tight_layout()
 
     plt.show()
 

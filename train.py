@@ -22,12 +22,12 @@ from tqdm import tqdm
 # Parameters
 # ==========================================================
 
-DMD_GRID = (32, 32)
+DMD_GRID = (4, 4)
 
-CAM_GRID = (32, 32)
+CAM_GRID = (4, 4)
 
-CAM_REGION_W = 4
-CAM_REGION_H = 4
+CAM_REGION_W = 2
+CAM_REGION_H = 2
 
 CAM_ORIGIN_X = 1220
 CAM_ORIGIN_Y = 1017
